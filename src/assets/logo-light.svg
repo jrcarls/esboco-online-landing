@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="none">
+  <!-- Icon -->
+  <rect x="4" y="10" width="44" height="56" rx="5" fill="#7f00ff" fill-opacity="0.08"/>
+  <rect x="4" y="10" width="44" height="56" rx="5" stroke="#7f00ff" stroke-width="2"/>
+  <line x1="14" y1="10" x2="14" y2="66" stroke="#7f00ff" stroke-width="2"/>
+  <line x1="22" y1="25" x2="40" y2="25" stroke="#7f00ff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="22" y1="34" x2="37" y2="34" stroke="#7f00ff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="22" y1="42" x2="39" y2="42" stroke="#7f00ff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="22" y1="50" x2="33" y2="50" stroke="#7f00ff" stroke-width="1.5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M44 2 C49 7 51 14 46 21 C44 16 42 9 44 2Z" fill="#7f00ff"/>
+  <path d="M46 21 L41 30" stroke="#7f00ff" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="40" cy="25" r="3" fill="#00B368"/>
+  <!-- Divider -->
+  <line x1="64" y1="16" x2="64" y2="64" stroke="#7f00ff" stroke-width="1" opacity="0.2"/>
+  <!-- Text -->
+  <text x="76" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="bold" fill="#1A0A33" letter-spacing="-0.5">Esbo&#231;o</text>
+  <text x="77" y="62" font-family="Arial, sans-serif" font-size="9" fill="#00B368" letter-spacing="5">ONLINE</text>
+  <rect x="77" y="68" width="40" height="2" rx="1" fill="#7f00ff"/>
+</svg>
