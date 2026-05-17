@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import Button from '../ui/Button.astro';
+import logoLight from '../../assets/logo-light.svg';
+---
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Esboço Online">
+      <Image src={logoLight} alt="Esboço Online" height={44} />
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navegação principal">
+      <a href="#recursos" class="navbar__link">Recursos</a>
+      <a href="#precos" class="navbar__link">Preços</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <!-- URL do app -->
+      <Button href="#" variant="ghost" size="sm">Entrar</Button>
+      <!-- URL do app -->
+      <Button href="#" size="sm">Começar grátis</Button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(124, 58, 237, .1);
+    box-shadow: 0 1px 24px rgba(124, 58, 237, .06);
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 68px;
+  }
+
+  .navbar__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__nav {
+    display: flex;
+    gap: 1.75rem;
+    flex: 1;
+  }
+
+  .navbar__link {
+    font-size: .9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color .15s;
+    position: relative;
+  }
+  .navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0; right: 0;
+    height: 2px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform .2s ease;
+    transform-origin: left;
+  }
+  .navbar__link:hover {
+    color: var(--color-primary);
+  }
+  .navbar__link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .navbar__actions {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .navbar__nav { display: none; }
+  }
+</style>

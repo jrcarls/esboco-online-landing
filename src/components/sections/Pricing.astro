@@ -1,0 +1,232 @@
+---
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import { plans } from '../../data/pricing';
+---
+
+<section id="precos" class="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Planos simples e transparentes</h2>
+      <p class="section-sub">Comece grátis. Faça upgrade quando precisar.</p>
+    </div>
+
+    <div class="pricing__grid">
+      {plans.map((plan) => (
+        plan.highlighted ? (
+          <div class="plan-card plan-card--gradient">
+            <div class="plan__badge">⭐ Mais popular</div>
+
+            <h3 class="plan__name">{plan.name}</h3>
+
+            <div class="plan__price">
+              <span class="plan__amount">{plan.price}</span>
+              {plan.period && <span class="plan__period">{plan.period}</span>}
+            </div>
+
+            {plan.note && <p class="plan__note">{plan.note}</p>}
+
+            <ul class="plan__features">
+              {plan.features.map((feature) => (
+                <li class="plan__feature">
+                  <span class="plan__check" aria-hidden="true">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <!-- URL do app -->
+            <Button href="#" variant="white" class="plan__cta">Começar agora</Button>
+          </div>
+        ) : (
+          <div class="plan-card">
+            <h3 class="plan__name">{plan.name}</h3>
+
+            <div class="plan__price">
+              <span class="plan__amount">{plan.price}</span>
+              {plan.period && <span class="plan__period">{plan.period}</span>}
+            </div>
+
+            {plan.note && <p class="plan__note">{plan.note}</p>}
+
+            <ul class="plan__features">
+              {plan.features.map((feature) => (
+                <li class="plan__feature">
+                  <span class="plan__check" aria-hidden="true">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <!-- URL do app -->
+            <Button href="#" variant="secondary" class="plan__cta">Escolher plano</Button>
+          </div>
+        )
+      ))}
+    </div>
+
+    <p class="pricing__footer">
+      Pagamento seguro pelo Stripe · Cancele quando quiser
+    </p>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: 6rem 0;
+    background: #fff;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: var(--color-text);
+  }
+
+  .section-sub {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+  }
+
+  .pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  /* Base card */
+  .plan-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.875rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(124, 58, 237, .1);
+    border-color: rgba(124, 58, 237, .2);
+  }
+
+  /* Gradient featured card */
+  .plan-card--gradient {
+    background: linear-gradient(145deg, #7c3aed 0%, #6366f1 100%);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 20px 60px rgba(124, 58, 237, .4);
+    padding: 2.25rem 1.875rem;
+  }
+  .plan-card--gradient:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 70px rgba(124, 58, 237, .5);
+    border-color: transparent;
+  }
+
+  .plan__badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, .22);
+    color: #fff;
+    font-size: .8125rem;
+    font-weight: 600;
+    padding: .3rem .875rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, .3);
+    width: fit-content;
+    backdrop-filter: blur(8px);
+  }
+
+  .plan__name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+
+  .plan-card--gradient .plan__name {
+    color: rgba(255, 255, 255, .9);
+  }
+
+  .plan__price {
+    display: flex;
+    align-items: baseline;
+    gap: .3rem;
+  }
+
+  .plan__amount {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+  .plan-card--gradient .plan__amount { color: #fff; }
+
+  .plan__period {
+    font-size: .875rem;
+    color: var(--color-text-muted);
+  }
+  .plan-card--gradient .plan__period { color: rgba(255, 255, 255, .7); }
+
+  .plan__note {
+    font-size: .875rem;
+    color: var(--color-text-subtle);
+    margin-top: -.375rem;
+  }
+  .plan-card--gradient .plan__note { color: rgba(255, 255, 255, .6); }
+
+  .plan__features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    flex: 1;
+  }
+
+  .plan__feature {
+    display: flex;
+    gap: .625rem;
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    align-items: flex-start;
+  }
+  .plan-card--gradient .plan__feature { color: rgba(255, 255, 255, .82); }
+
+  .plan__check {
+    color: var(--color-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .plan-card--gradient .plan__check { color: rgba(255, 255, 255, .7); }
+
+  .plan__cta {
+    width: 100%;
+    margin-top: .5rem;
+  }
+
+  .pricing__footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: .875rem;
+    color: var(--color-text-subtle);
+  }
+
+  @media (max-width: 768px) {
+    .pricing__grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+</style>

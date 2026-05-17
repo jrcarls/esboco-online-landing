@@ -1,0 +1,146 @@
+---
+import Button from '../ui/Button.astro';
+---
+
+<section class="hero">
+  <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__badge">
+      <span class="hero__badge-dot" aria-hidden="true"></span>
+      Grátis para sempre no plano básico
+    </div>
+
+    <h1 class="hero__title">
+      Organize seus sermões<br />com facilidade
+    </h1>
+
+    <p class="hero__sub">
+      A plataforma completa para pastores e pregadores gerenciarem esboços,
+      estudar a Bíblia e organizar a agenda ministerial.
+    </p>
+
+    <div class="hero__ctas">
+      <!-- URL do app -->
+      <Button href="#" size="lg">Começar grátis</Button>
+      <Button href="#precos" variant="secondary" size="lg">Ver planos</Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 7rem 0 6rem;
+    background: #fdfcff;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(124, 58, 237, .1) 1px, transparent 1px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    z-index: 0;
+  }
+
+  .hero__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero__orb--1 {
+    width: 520px;
+    height: 520px;
+    background: rgba(124, 58, 237, .22);
+    top: -160px;
+    right: -120px;
+  }
+  .hero__orb--2 {
+    width: 380px;
+    height: 380px;
+    background: rgba(99, 102, 241, .18);
+    bottom: -120px;
+    left: -80px;
+  }
+
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+  }
+
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    background: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(124, 58, 237, .2);
+    border-radius: var(--radius-full);
+    padding: .4rem 1.1rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    box-shadow: 0 2px 12px rgba(124, 58, 237, .12);
+  }
+
+  .hero__badge-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .hero__badge-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--color-primary);
+    animation: pulse-dot 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { transform: scale(1);   opacity: .6; }
+    50%       { transform: scale(2.4); opacity: 0;  }
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    max-width: 750px;
+    background: linear-gradient(135deg, var(--color-text) 20%, var(--color-primary) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero__sub {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 540px;
+    line-height: 1.75;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: .25rem;
+  }
+</style>

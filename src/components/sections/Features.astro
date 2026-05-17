@@ -1,0 +1,107 @@
+---
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+import { features } from '../../data/features';
+---
+
+<section id="recursos" class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Tudo que você precisa para o seu ministério</h2>
+      <p class="section-sub">Ferramentas pensadas para pastores, pregadores e líderes ministeriais.</p>
+    </div>
+
+    <div class="features__grid">
+      {features.map((feature) => (
+        <Card>
+          <div class="feature">
+            <div class="feature__icon-wrap">
+              <Icon name={feature.icon} size={22} />
+            </div>
+            <h3 class="feature__title">{feature.title}</h3>
+            <p class="feature__desc">{feature.description}</p>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 6rem 0;
+    background: #fff;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: var(--color-text);
+    max-width: 560px;
+  }
+
+  .section-sub {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    max-width: 480px;
+    line-height: 1.65;
+  }
+
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .feature__icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-bg);
+    border: 1px solid rgba(124, 58, 237, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    transition: background .2s ease, box-shadow .2s ease;
+  }
+
+  .feature:hover .feature__icon-wrap {
+    background: linear-gradient(135deg, var(--color-primary-bg) 0%, rgba(124, 58, 237, .18) 100%);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, .18);
+  }
+
+  .feature__title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: var(--color-text);
+  }
+
+  .feature__desc {
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .features__grid { grid-template-columns: 1fr; }
+  }
+</style>

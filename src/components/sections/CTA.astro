@@ -1,0 +1,72 @@
+---
+import Button from '../ui/Button.astro';
+---
+
+<section class="cta">
+  <div class="cta__orb cta__orb--1" aria-hidden="true"></div>
+  <div class="cta__orb cta__orb--2" aria-hidden="true"></div>
+
+  <div class="container cta__inner">
+    <h2 class="cta__title">Comece hoje, é grátis</h2>
+    <p class="cta__sub">
+      Junte-se a pastores que já organizam melhor o seu ministério.
+    </p>
+    <!-- URL do app -->
+    <Button href="#" variant="white" size="lg">Criar conta grátis</Button>
+  </div>
+</section>
+
+<style>
+  .cta {
+    position: relative;
+    overflow: hidden;
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 55%, #3b0764 100%);
+  }
+
+  .cta__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+  .cta__orb--1 {
+    width: 420px;
+    height: 420px;
+    background: rgba(124, 58, 237, .5);
+    top: -100px;
+    right: 5%;
+  }
+  .cta__orb--2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(99, 102, 241, .4);
+    bottom: -80px;
+    left: 8%;
+  }
+
+  .cta__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .cta__title {
+    font-size: clamp(2rem, 4.5vw, 2.875rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: #fff;
+    line-height: 1.15;
+  }
+
+  .cta__sub {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, .7);
+    max-width: 460px;
+    line-height: 1.7;
+  }
+</style>
