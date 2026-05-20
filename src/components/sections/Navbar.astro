@@ -4,7 +4,7 @@ import Button from '../ui/Button.astro';
 import logoLight from '../../assets/logo-light.svg';
 ---
 
-<header class="navbar">
+<header class="navbar" data-navbar>
   <div class="container navbar__inner">
     <a href="/" class="navbar__logo" aria-label="Esboço Online">
       <Image src={logoLight} alt="Esboço Online" height={44} />
@@ -13,14 +13,104 @@ import logoLight from '../../assets/logo-light.svg';
     <nav class="navbar__nav" aria-label="Navegação principal">
       <a href="#recursos" class="navbar__link">Recursos</a>
       <a href="#precos" class="navbar__link">Preços</a>
+      <a href="/blog" class="navbar__link">Blog</a>
     </nav>
 
     <div class="navbar__actions">
       <Button href="https://app.esbocoonline.com.br" variant="ghost" size="sm">Entrar</Button>
       <Button href="https://app.esbocoonline.com.br" size="sm">Começar grátis</Button>
     </div>
+
+    <button
+      type="button"
+      class="navbar__toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="navbar-menu"
+      data-navbar-toggle
+    >
+      <span class="navbar__toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+
+  <div
+    id="navbar-menu"
+    class="navbar__mobile"
+    data-navbar-menu
+    hidden
+  >
+    <div class="container navbar__mobile-inner">
+      <nav class="navbar__mobile-nav" aria-label="Navegação mobile">
+        <a href="#recursos" class="navbar__mobile-link" data-navbar-link>Recursos</a>
+        <a href="#precos" class="navbar__mobile-link" data-navbar-link>Preços</a>
+        <a href="/blog" class="navbar__mobile-link" data-navbar-link>Blog</a>
+      </nav>
+      <div class="navbar__mobile-actions">
+        <Button href="https://app.esbocoonline.com.br" variant="ghost" size="md" class="navbar__mobile-btn">
+          Entrar
+        </Button>
+        <Button href="https://app.esbocoonline.com.br" size="md" class="navbar__mobile-btn">
+          Começar grátis
+        </Button>
+      </div>
+    </div>
   </div>
 </header>
+
+<script>
+  function initNavbar() {
+    const navbar = document.querySelector<HTMLElement>('[data-navbar]');
+    const toggle = document.querySelector<HTMLButtonElement>('[data-navbar-toggle]');
+    const menu = document.querySelector<HTMLElement>('[data-navbar-menu]');
+    const links = document.querySelectorAll<HTMLAnchorElement>('[data-navbar-link]');
+
+    if (!navbar || !toggle || !menu) return;
+
+    const navBar: HTMLElement = navbar;
+    const menuToggle: HTMLButtonElement = toggle;
+    const menuPanel: HTMLElement = menu;
+
+    const mq = window.matchMedia('(max-width: 768px)');
+
+    function setOpen(open: boolean) {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      navBar.classList.toggle('navbar--open', open);
+      menuPanel.hidden = !open;
+      document.body.classList.toggle('navbar-menu-open', open);
+    }
+
+    function close() {
+      setOpen(false);
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      setOpen(!isOpen);
+    });
+
+    links.forEach((link) => link.addEventListener('click', close));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+
+    mq.addEventListener('change', (e) => {
+      if (!e.matches) close();
+    });
+
+    menuPanel.addEventListener('click', (e) => {
+      if (e.target === menuPanel) close();
+    });
+  }
+
+  initNavbar();
+  document.addEventListener('astro:page-load', initNavbar);
+</script>
 
 <style>
   .navbar {
@@ -86,7 +176,139 @@ import logoLight from '../../assets/logo-light.svg';
     flex-shrink: 0;
   }
 
-  @media (max-width: 640px) {
-    .navbar__nav { display: none; }
+  .navbar__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-md);
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: background .15s;
+    flex-shrink: 0;
+  }
+  .navbar__toggle:hover {
+    background: var(--color-bg-muted);
+  }
+  .navbar__toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .navbar__toggle-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 22px;
+    height: 18px;
+  }
+  .navbar__toggle-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .2s ease;
+    transform-origin: center;
+  }
+
+  .navbar--open .navbar__toggle-icon span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navbar--open .navbar__toggle-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .navbar--open .navbar__toggle-icon span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar__mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(124, 58, 237, .1);
+    box-shadow: 0 12px 32px rgba(124, 58, 237, .1);
+    animation: navbar-slide-in .25s ease;
+  }
+
+  @keyframes navbar-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar__mobile-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem 0 1.5rem;
+  }
+
+  .navbar__mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+  }
+
+  .navbar__mobile-link {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: .75rem 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: color .15s;
+  }
+  .navbar__mobile-link:last-child {
+    border-bottom: none;
+  }
+  .navbar__mobile-link:hover {
+    color: var(--color-primary);
+  }
+
+  .navbar__mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+  }
+
+  .navbar__mobile-actions :global(.navbar__mobile-btn) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .navbar__nav,
+    .navbar__actions {
+      display: none;
+    }
+
+    .navbar__toggle {
+      display: flex;
+    }
+
+    .navbar__logo {
+      margin-right: auto;
+    }
+  }
+</style>
+
+<style is:global>
+  body.navbar-menu-open {
+    overflow: hidden;
   }
 </style>
