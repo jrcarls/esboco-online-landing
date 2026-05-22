@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/sections/Navbar.astro';
 import Footer from '../../components/sections/Footer.astro';
+import { REGISTER_URL } from '../../data/config';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -19,7 +20,7 @@ function formatDate(date: Date) {
   return date.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-const readTime = Math.max(1, Math.ceil(post.body.split(/\s+/).length / 200));
+const readTime = Math.max(1, Math.ceil((post.body ?? '').split(/\s+/).length / 200));
 ---
 
 <Layout title={`${post.data.title} — Esboço Online`} description={post.data.description}>
@@ -64,7 +65,7 @@ const readTime = Math.max(1, Math.ceil(post.body.split(/\s+/).length / 200));
     <section class="post-cta">
       <div class="container post-cta__inner">
         <p class="post-cta__text">Organize seus sermões com o Esboço Online</p>
-        <a href="https://app.esbocoonline.com.br" class="post-cta__btn">Criar minha conta →</a>
+        <a href={REGISTER_URL} class="post-cta__btn">Criar minha conta →</a>
       </div>
     </section>
   </main>

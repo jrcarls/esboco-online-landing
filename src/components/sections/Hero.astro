@@ -1,5 +1,6 @@
 ---
 import Button from '../ui/Button.astro';
+import { REGISTER_URL } from '../../data/config';
 ---
 
 <section class="hero">
@@ -22,7 +23,7 @@ import Button from '../ui/Button.astro';
     </p>
 
     <div class="hero__ctas">
-      <Button href="https://app.esbocoonline.com.br" size="lg">Criar minha conta</Button>
+      <Button href={REGISTER_URL} size="lg">Criar minha conta</Button>
     </div>
   </div>
 </section>

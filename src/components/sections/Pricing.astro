@@ -2,6 +2,7 @@
 import Card from '../ui/Card.astro';
 import Button from '../ui/Button.astro';
 import { plans } from '../../data/pricing';
+import { REGISTER_URL } from '../../data/config';
 ---
 
 <section id="precos" class="pricing">
@@ -35,7 +36,7 @@ import { plans } from '../../data/pricing';
               ))}
             </ul>
 
-            <Button href="https://app.esbocoonline.com.br" variant="white" class="plan__cta">Começar agora</Button>
+            <Button href={REGISTER_URL} variant="white" class="plan__cta">Começar agora</Button>
           </div>
         ) : (
           <div class="plan-card">
@@ -57,7 +58,7 @@ import { plans } from '../../data/pricing';
               ))}
             </ul>
 
-            <Button href="https://app.esbocoonline.com.br" variant="secondary" class="plan__cta">Escolher plano</Button>
+            <Button href={REGISTER_URL} variant="secondary" class="plan__cta">Escolher plano</Button>
           </div>
         )
       ))}

@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/sections/Navbar.astro';
 import Footer from '../components/sections/Footer.astro';
-import Blob from '../components/ui/Blob.astro';
+import BlobComponent from '../components/ui/Blob.astro';
+import { REGISTER_URL } from '../data/config';
 ---
 
 <Layout
@@ -15,8 +16,8 @@ import Blob from '../components/ui/Blob.astro';
 
     <!-- ─── Hero ─────────────────────────────────────── -->
     <section class="bd-hero">
-      <Blob size="lg" color="primary" animated position="top-right" />
-      <Blob size="md" color="secondary" animated position="bottom-left" delay={5} />
+      <BlobComponent size="lg" color="primary" animated position="top-right" />
+      <BlobComponent size="md" color="secondary" animated position="bottom-left" delay={5} />
 
       <div class="container bd-hero__inner">
         <span class="bd-tag">UI Component</span>
@@ -47,7 +48,7 @@ import Blob from '../components/ui/Blob.astro';
         <div class="bd-grid bd-grid--3">
           <div class="bd-card">
             <div class="bd-card__stage bd-card__stage--sm">
-              <Blob size="sm" color="primary" animated position="center" />
+              <BlobComponent size="sm" color="primary" animated position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code">size="sm"</code>
@@ -57,7 +58,7 @@ import Blob from '../components/ui/Blob.astro';
 
           <div class="bd-card">
             <div class="bd-card__stage bd-card__stage--md">
-              <Blob size="md" color="primary" animated position="center" />
+              <BlobComponent size="md" color="primary" animated position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code">size="md"</code>
@@ -67,7 +68,7 @@ import Blob from '../components/ui/Blob.astro';
 
           <div class="bd-card">
             <div class="bd-card__stage bd-card__stage--lg">
-              <Blob size="lg" color="primary" animated position="center" />
+              <BlobComponent size="lg" color="primary" animated position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code">size="lg"</code>
@@ -92,7 +93,7 @@ import Blob from '../components/ui/Blob.astro';
         <div class="bd-grid bd-grid--3">
           <div class="bd-card bd-card--dark">
             <div class="bd-card__stage bd-card__stage--color">
-              <Blob size="md" color="primary" animated position="center" />
+              <BlobComponent size="md" color="primary" animated position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code bd-code--light">color="primary"</code>
@@ -102,7 +103,7 @@ import Blob from '../components/ui/Blob.astro';
 
           <div class="bd-card bd-card--dark">
             <div class="bd-card__stage bd-card__stage--color">
-              <Blob size="md" color="secondary" animated position="center" delay={3} />
+              <BlobComponent size="md" color="secondary" animated position="center" delay={3} />
             </div>
             <div class="bd-card__info">
               <code class="bd-code bd-code--light">color="secondary"</code>
@@ -112,7 +113,7 @@ import Blob from '../components/ui/Blob.astro';
 
           <div class="bd-card bd-card--dark">
             <div class="bd-card__stage bd-card__stage--color">
-              <Blob size="md" color="accent" animated position="center" delay={7} />
+              <BlobComponent size="md" color="accent" animated position="center" delay={7} />
             </div>
             <div class="bd-card__info">
               <code class="bd-code bd-code--light">color="accent"</code>
@@ -138,7 +139,7 @@ import Blob from '../components/ui/Blob.astro';
         <div class="bd-grid bd-grid--2">
           <div class="bd-card">
             <div class="bd-card__stage bd-card__stage--anim">
-              <Blob size="md" color="primary" animated={true} position="center" />
+              <BlobComponent size="md" color="primary" animated={true} position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code">animated={true}</code>
@@ -148,7 +149,7 @@ import Blob from '../components/ui/Blob.astro';
 
           <div class="bd-card">
             <div class="bd-card__stage bd-card__stage--anim">
-              <Blob size="md" color="primary" animated={false} position="center" />
+              <BlobComponent size="md" color="primary" animated={false} position="center" />
             </div>
             <div class="bd-card__info">
               <code class="bd-code">animated={false}</code>
@@ -173,11 +174,11 @@ import Blob from '../components/ui/Blob.astro';
         </header>
 
         <div class="bd-pos-demo">
-          <Blob size="sm" color="primary"   animated position="top-left"     />
-          <Blob size="sm" color="secondary" animated position="top-right"    delay={3} />
-          <Blob size="sm" color="accent"    animated position="bottom-left"  delay={6} />
-          <Blob size="sm" color="primary"   animated position="bottom-right" delay={9} />
-          <Blob size="sm" color="secondary" animated position="center"       delay={4} />
+          <BlobComponent size="sm" color="primary"   animated position="top-left"     />
+          <BlobComponent size="sm" color="secondary" animated position="top-right"    delay={3} />
+          <BlobComponent size="sm" color="accent"    animated position="bottom-left"  delay={6} />
+          <BlobComponent size="sm" color="primary"   animated position="bottom-right" delay={9} />
+          <BlobComponent size="sm" color="secondary" animated position="center"       delay={4} />
 
           <div class="bd-pos-demo__labels">
             <span class="bd-pos-label bd-pos-label--tl">top-left</span>
@@ -204,9 +205,9 @@ import Blob from '../components/ui/Blob.astro';
 
         <!-- live preview -->
         <div class="bd-live">
-          <Blob size="lg" color="primary"   animated position="top-right"    />
-          <Blob size="md" color="secondary" animated position="bottom-left"  delay={6} />
-          <Blob size="sm" color="accent"    animated position="top-left"     delay={3} />
+          <BlobComponent size="lg" color="primary"   animated position="top-right"    />
+          <BlobComponent size="md" color="secondary" animated position="bottom-left"  delay={6} />
+          <BlobComponent size="sm" color="accent"    animated position="top-left"     delay={3} />
 
           <div class="bd-live__content">
             <h3 class="bd-live__title">Organize seus sermões</h3>
@@ -214,7 +215,7 @@ import Blob from '../components/ui/Blob.astro';
               Escreva, estruture e acesse seus esboços de qualquer lugar.
               Simples como deve ser.
             </p>
-            <a class="bd-live__btn" href="#">Começar grátis</a>
+            <a class="bd-live__btn" href={REGISTER_URL}>Começar grátis</a>
           </div>
         </div>
 

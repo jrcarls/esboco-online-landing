@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Button from '../ui/Button.astro';
 import logoLight from '../../assets/logo-light.svg';
+import { LOGIN_URL, REGISTER_URL } from '../../data/config';
 ---
 
 <header class="navbar" data-navbar>
@@ -17,8 +18,8 @@ import logoLight from '../../assets/logo-light.svg';
     </nav>
 
     <div class="navbar__actions">
-      <Button href="https://app.esbocoonline.com.br" variant="ghost" size="sm">Entrar</Button>
-      <Button href="https://app.esbocoonline.com.br" size="sm">Criar minha conta</Button>
+      <Button href={LOGIN_URL} variant="ghost" size="sm">Entrar</Button>
+      <Button href={REGISTER_URL} size="sm">Criar minha conta</Button>
     </div>
 
     <button
@@ -50,10 +51,10 @@ import logoLight from '../../assets/logo-light.svg';
         <a href="/blog" class="navbar__mobile-link" data-navbar-link>Blog</a>
       </nav>
       <div class="navbar__mobile-actions">
-        <Button href="https://app.esbocoonline.com.br" variant="ghost" size="md" class="navbar__mobile-btn">
+        <Button href={LOGIN_URL} variant="ghost" size="md" class="navbar__mobile-btn">
           Entrar
         </Button>
-        <Button href="https://app.esbocoonline.com.br" size="md" class="navbar__mobile-btn">
+        <Button href={REGISTER_URL} size="md" class="navbar__mobile-btn">
           Criar minha conta
         </Button>
       </div>
