@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /blob/
+
+Sitemap: https://esbocoonline.com.br/sitemap-index.xml

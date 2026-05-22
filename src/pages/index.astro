@@ -10,6 +10,15 @@ import Footer from '../components/sections/Footer.astro';
 ---
 
 <Layout>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Esboço Online',
+    url: 'https://esbocoonline.com.br',
+    logo: 'https://esbocoonline.com.br/favicon.svg',
+    description: 'A plataforma completa para pastores e pregadores gerenciarem esboços, estudar a Bíblia e organizar a agenda ministerial.',
+    sameAs: ['https://app.esbocoonline.com.br'],
+  })} />
   <Navbar />
   <main>
     <Hero />
