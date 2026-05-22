@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout
+  title="Política de Privacidade — Esboço Online"
+  description="Saiba como o Esboço Online coleta, usa e protege seus dados pessoais."
+>
+  <Navbar />
+
+  <main class="legal">
+    <div class="container">
+      <header class="legal__header">
+        <p class="legal__label">Legal</p>
+        <h1 class="legal__title">Política de Privacidade</h1>
+        <p class="legal__date">Última atualização: maio de 2026</p>
+      </header>
+
+      <div class="legal__body">
+
+        <section>
+          <h2>1. Introdução</h2>
+          <p>Esta Política de Privacidade descreve como o Esboço Online coleta, utiliza e protege seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+        </section>
+
+        <section>
+          <h2>2. Dados que coletamos</h2>
+          <p>Coletamos apenas os dados necessários para o funcionamento da plataforma:</p>
+          <ul>
+            <li><strong>Dados de cadastro:</strong> nome e endereço de e-mail;</li>
+            <li><strong>Dados de uso:</strong> esboços e conteúdos criados por você na plataforma;</li>
+            <li><strong>Dados técnicos:</strong> endereço IP, tipo de navegador e logs de acesso, para fins de segurança e diagnóstico.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Como usamos seus dados</h2>
+          <p>Seus dados são utilizados para:</p>
+          <ul>
+            <li>Criar e gerenciar sua conta;</li>
+            <li>Armazenar e exibir seus esboços;</li>
+            <li>Enviar comunicações sobre o serviço (atualizações, notificações importantes);</li>
+            <li>Melhorar a plataforma com base no uso agregado e anônimo.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Compartilhamento de dados</h2>
+          <p>Não vendemos nem compartilhamos seus dados pessoais com terceiros, exceto quando necessário para a operação do serviço (como provedores de infraestrutura de nuvem) ou por obrigação legal.</p>
+        </section>
+
+        <section>
+          <h2>5. Armazenamento e segurança</h2>
+          <p>Seus dados são armazenados em servidores seguros com criptografia em trânsito (HTTPS) e em repouso. Adotamos boas práticas de segurança para proteger suas informações contra acesso não autorizado.</p>
+        </section>
+
+        <section>
+          <h2>6. Seus direitos (LGPD)</h2>
+          <p>Conforme a LGPD, você tem direito a:</p>
+          <ul>
+            <li>Acessar os dados que temos sobre você;</li>
+            <li>Corrigir dados incompletos ou desatualizados;</li>
+            <li>Solicitar a exclusão dos seus dados;</li>
+            <li>Revogar o consentimento a qualquer momento;</li>
+            <li>Solicitar a portabilidade dos seus dados.</li>
+          </ul>
+          <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail: <a href="mailto:contato@esbocoonline.com.br">contato@esbocoonline.com.br</a>.</p>
+        </section>
+
+        <section>
+          <h2>7. Cookies</h2>
+          <p>Utilizamos cookies estritamente necessários para o funcionamento da plataforma (como manutenção de sessão). Não utilizamos cookies de rastreamento ou publicidade.</p>
+        </section>
+
+        <section>
+          <h2>8. Retenção de dados</h2>
+          <p>Mantemos seus dados enquanto sua conta estiver ativa. Após o encerramento da conta, os dados são removidos em até 30 dias, exceto quando a retenção for exigida por lei.</p>
+        </section>
+
+        <section>
+          <h2>9. Alterações nesta política</h2>
+          <p>Podemos atualizar esta política periodicamente. Notificaremos sobre mudanças relevantes por e-mail ou por aviso na plataforma.</p>
+        </section>
+
+        <section>
+          <h2>10. Contato</h2>
+          <p>Dúvidas ou solicitações relacionadas à privacidade: <a href="mailto:contato@esbocoonline.com.br">contato@esbocoonline.com.br</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    padding: 5rem 0 6rem;
+    background: #fff;
+  }
+
+  .legal__header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .legal__label {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: var(--color-primary-bg);
+    border: 1px solid rgba(124, 58, 237, .2);
+    border-radius: var(--radius-full);
+    padding: .3rem .9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .legal__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--color-text);
+    margin-bottom: .5rem;
+  }
+
+  .legal__date {
+    font-size: .9375rem;
+    color: var(--color-text-subtle);
+  }
+
+  .legal__body {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .legal__body section h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--color-text);
+    margin-bottom: .75rem;
+  }
+
+  .legal__body p {
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+
+  .legal__body ul {
+    margin-top: .75rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .legal__body li {
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .legal__body strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .legal__body a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .legal__body a:hover {
+    color: var(--color-primary-dark);
+  }
+</style>

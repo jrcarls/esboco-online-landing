@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.astro';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout
+  title="Termos de Uso — Esboço Online"
+  description="Leia os termos de uso da plataforma Esboço Online."
+>
+  <Navbar />
+
+  <main class="legal">
+    <div class="container">
+      <header class="legal__header">
+        <p class="legal__label">Legal</p>
+        <h1 class="legal__title">Termos de Uso</h1>
+        <p class="legal__date">Última atualização: maio de 2026</p>
+      </header>
+
+      <div class="legal__body">
+
+        <section>
+          <h2>1. Aceitação dos termos</h2>
+          <p>Ao criar uma conta ou utilizar o Esboço Online, você concorda com estes Termos de Uso. Se não concordar com alguma parte, não utilize a plataforma.</p>
+        </section>
+
+        <section>
+          <h2>2. Descrição do serviço</h2>
+          <p>O Esboço Online é uma plataforma digital voltada para pastores, pregadores e líderes ministeriais, oferecendo ferramentas para criação, organização e gerenciamento de esboços de sermões e estudos bíblicos.</p>
+        </section>
+
+        <section>
+          <h2>3. Cadastro e conta</h2>
+          <p>Para acessar os recursos da plataforma, você deve criar uma conta com informações verdadeiras e mantê-las atualizadas. Você é responsável pela confidencialidade da sua senha e por todas as atividades realizadas em sua conta.</p>
+        </section>
+
+        <section>
+          <h2>4. Uso permitido</h2>
+          <p>Você pode utilizar o Esboço Online para fins pessoais, ministeriais e institucionais legítimos. É proibido:</p>
+          <ul>
+            <li>Compartilhar sua conta com terceiros;</li>
+            <li>Usar a plataforma para fins ilegais ou que violem direitos de terceiros;</li>
+            <li>Tentar acessar dados de outros usuários sem autorização;</li>
+            <li>Realizar engenharia reversa ou extrair o código-fonte da aplicação.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Conteúdo do usuário</h2>
+          <p>Você retém todos os direitos sobre os esboços e conteúdos que criar na plataforma. Ao utilizá-la, você nos concede uma licença limitada para armazenar e exibir seu conteúdo exclusivamente para o funcionamento do serviço.</p>
+        </section>
+
+        <section>
+          <h2>6. Disponibilidade do serviço</h2>
+          <p>Buscamos manter a plataforma disponível continuamente, mas não garantimos disponibilidade ininterrupta. Podemos realizar manutenções programadas ou emergenciais sem aviso prévio.</p>
+        </section>
+
+        <section>
+          <h2>7. Alterações nos termos</h2>
+          <p>Podemos atualizar estes termos a qualquer momento. Notificaremos sobre mudanças significativas por e-mail ou por aviso na plataforma. O uso continuado após as alterações implica aceitação dos novos termos.</p>
+        </section>
+
+        <section>
+          <h2>8. Encerramento de conta</h2>
+          <p>Você pode encerrar sua conta a qualquer momento. Reservamo-nos o direito de suspender ou encerrar contas que violem estes termos.</p>
+        </section>
+
+        <section>
+          <h2>9. Limitação de responsabilidade</h2>
+          <p>O Esboço Online é fornecido "como está". Não nos responsabilizamos por perdas de dados decorrentes de falhas técnicas, uso indevido ou causas fora do nosso controle.</p>
+        </section>
+
+        <section>
+          <h2>10. Contato</h2>
+          <p>Em caso de dúvidas sobre estes termos, entre em contato pelo e-mail: <a href="mailto:contato@esbocoonline.com.br">contato@esbocoonline.com.br</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .legal {
+    padding: 5rem 0 6rem;
+    background: #fff;
+  }
+
+  .legal__header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .legal__label {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: var(--color-primary-bg);
+    border: 1px solid rgba(124, 58, 237, .2);
+    border-radius: var(--radius-full);
+    padding: .3rem .9rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .legal__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--color-text);
+    margin-bottom: .5rem;
+  }
+
+  .legal__date {
+    font-size: .9375rem;
+    color: var(--color-text-subtle);
+  }
+
+  .legal__body {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .legal__body section h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--color-text);
+    margin-bottom: .75rem;
+  }
+
+  .legal__body p {
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+
+  .legal__body ul {
+    margin-top: .75rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .legal__body li {
+    font-size: .9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .legal__body a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .legal__body a:hover {
+    color: var(--color-primary-dark);
+  }
+</style>
