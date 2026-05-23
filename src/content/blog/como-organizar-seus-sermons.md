@@ -1,7 +1,7 @@
 ---
 title: "Como organizar seus sermões de forma eficiente"
 description: "Descubra estratégias práticas para estruturar seus esboços, manter um arquivo organizado e pregar com mais confiança e clareza."
-pubDate: 2025-05-10
+pubDate: 2026-05-22
 category: "Pregação"
 author: "Equipe Esboço Online"
 featured: true

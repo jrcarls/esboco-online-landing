@@ -1,7 +1,7 @@
 ---
 title: "5 hábitos de estudo bíblico para pregadores"
 description: "Pequenas práticas diárias que transformam a qualidade do seu preparo homilético e aprofundam sua intimidade com as Escrituras."
-pubDate: 2025-04-28
+pubDate: 2026-05-22
 category: "Estudo Bíblico"
 author: "Equipe Esboço Online"
 ---

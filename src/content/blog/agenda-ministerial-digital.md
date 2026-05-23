@@ -1,7 +1,7 @@
 ---
 title: "Por que pastores precisam de uma agenda ministerial digital"
 description: "Como a gestão digital do tempo e dos compromissos pastorais protege o ministério, a família e a saúde do pastor."
-pubDate: 2025-04-14
+pubDate: 2026-05-22
 category: "Gestão"
 author: "Equipe Esboço Online"
 ---
