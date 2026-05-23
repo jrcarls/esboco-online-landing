@@ -13,7 +13,7 @@ A boa notícia é que a organização certa transforma o preparo do sermão de u
 
 ## Por que a organização importa
 
-Um arquivo bem estruturado de sermões não é apenas uma questão de praticidade — é uma questão de mordomia. Cada esboço que você prepara representa horas de oração, estudo e reflexão. Perder esse material, ou não conseguir encontrá-lo quando precisa, é desperdiçar um tesouro espiritual.
+Um arquivo bem estruturado de sermões não é apenas uma questão de praticidade - é uma questão de mordomia. Cada esboço que você prepara representa horas de oração, estudo e reflexão. Perder esse material, ou não conseguir encontrá-lo quando precisa, é desperdiçar um tesouro espiritual.
 
 Além disso, sermões bem arquivados permitem:
 
@@ -36,7 +36,7 @@ Em uma frase, o que esta mensagem quer comunicar? A proposição central é o co
 Três a quatro pontos principais costumam ser o ideal. Menos que isso pode parecer superficial; mais que isso sobrecarrega a memória dos ouvintes.
 
 ### 4. Ilustrações e aplicações
-Reserve espaço para ilustrações e aplicações práticas para cada ponto. Estas são frequentemente as partes mais trabalhosas de encontrar — anote sempre que uma ideia surgir, mesmo fora do contexto de preparo.
+Reserve espaço para ilustrações e aplicações práticas para cada ponto. Estas são frequentemente as partes mais trabalhosas de encontrar - anote sempre que uma ideia surgir, mesmo fora do contexto de preparo.
 
 ### 5. Introdução e conclusão
 Contraintuitivamente, escreva a introdução por último. Depois que o corpo do sermão está claro, você sabe exatamente o que precisa de apresentar.
@@ -49,16 +49,16 @@ Um sistema de arquivo funcional resolve dois problemas: encontrar o que você pr
 
 **Metadados consistentes** fazem toda a diferença. Para cada sermão, registre: data de pregação, texto-base, ocasião (culto regular, casamento, funeral, conferência), e uma avaliação pessoal breve de como foi a mensagem.
 
-**Revisão periódica** do arquivo — uma vez por trimestre é suficiente — ajuda a manter o sistema útil e a redescobrir mensagens esquecidas.
+**Revisão periódica** do arquivo - uma vez por trimestre é suficiente - ajuda a manter o sistema útil e a redescobrir mensagens esquecidas.
 
 ## O papel da tecnologia
 
 Ferramentas digitais transformaram o trabalho pastoral. Um bom aplicativo de gestão de esboços deve oferecer:
 
-- **Acesso em qualquer dispositivo** — você terá ideias fora do escritório
-- **Busca eficiente** — por texto, por tema, por data
-- **Organização por séries** — para gerenciar mensagens relacionadas
-- **Backup automático** — porque perder um arquivo de sermões é um pesadelo
+- **Acesso em qualquer dispositivo** - você terá ideias fora do escritório
+- **Busca eficiente** - por texto, por tema, por data
+- **Organização por séries** - para gerenciar mensagens relacionadas
+- **Backup automático** - porque perder um arquivo de sermões é um pesadelo
 
 O mais importante é que a ferramenta se adapte ao seu fluxo de trabalho, não o contrário. Um sistema que você não usa é inútil, independente de quão sofisticado seja.
 

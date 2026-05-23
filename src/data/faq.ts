@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     question: 'Preciso instalar algum programa?',
-    answer: 'Não. O Esboço Online funciona direto no navegador, em qualquer dispositivo — computador, tablet ou celular. Sem downloads ou instalações.',
+    answer: 'Não. O Esboço Online funciona direto no navegador, em qualquer dispositivo - computador, tablet ou celular. Sem downloads ou instalações.',
   },
   {
     question: 'Posso acessar meus esboços pelo celular?',
