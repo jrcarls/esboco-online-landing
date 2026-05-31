@@ -24,6 +24,10 @@ import { REGISTER_URL } from '../../data/config';
 
     <div class="hero__ctas">
       <Button href={REGISTER_URL} size="lg">Criar minha conta</Button>
+      <a href="#preview" class="hero__demo-link">
+        Ver demonstração
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -140,6 +144,22 @@ import { REGISTER_URL } from '../../data/config';
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-top: .25rem;
+  }
+
+  .hero__demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: gap .2s ease, color .15s;
+  }
+
+  .hero__demo-link:hover {
+    color: var(--color-primary-dark);
+    gap: .625rem;
   }
 </style>
