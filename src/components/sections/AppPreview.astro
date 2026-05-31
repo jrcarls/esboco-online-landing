@@ -78,30 +78,6 @@ import logoIcon from '../../assets/logo-icon.svg';
           </div>
         </aside>
 
-        <!-- Mobile tab bar -->
-        <div class="mobile-tabbar">
-          <button class="mobile-tab" data-tab="inicio">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span>Início</span>
-          </button>
-          <button class="mobile-tab active" data-tab="esbocos">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>Esboços</span>
-          </button>
-          <button class="mobile-tab" data-tab="biblia">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            <span>Bíblia</span>
-          </button>
-          <button class="mobile-tab" data-tab="agenda">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>Agenda</span>
-          </button>
-          <button class="mobile-tab" data-tab="favoritos">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-            <span>Favoritos</span>
-          </button>
-        </div>
-
         <!-- Main content -->
         <main class="app-main">
 
@@ -477,6 +453,31 @@ import logoIcon from '../../assets/logo-icon.svg';
           </div>
 
         </main>
+
+        <!-- Bottom nav mobile (igual ao app real) -->
+        <nav class="mobile-tabbar">
+          <button class="mobile-tab" data-tab="inicio">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Início</span>
+          </button>
+          <button class="mobile-tab active" data-tab="esbocos">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Esboços</span>
+          </button>
+          <button class="mobile-tab" data-tab="biblia">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Bíblia</span>
+          </button>
+          <button class="mobile-tab" data-tab="agenda">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Agenda</span>
+          </button>
+          <button class="mobile-tab" data-tab="favoritos">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            <span>Favoritos</span>
+          </button>
+        </nav>
+
       </div>
     </div>
   </div>
@@ -1240,49 +1241,44 @@ import logoIcon from '../../assets/logo-icon.svg';
   @media (max-width: 768px) {
     .app-sidebar { display: none; }
 
-    .mobile-tabbar {
-      display: flex;
-      overflow-x: auto;
-      border-bottom: 1px solid #e5e7eb;
-      background: #fff;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+    .app-window {
+      flex-direction: column;
+      height: 520px;
     }
 
-    .mobile-tabbar::-webkit-scrollbar { display: none; }
+    .app-main {
+      flex: 1;
+      height: auto;
+      overflow-y: auto;
+    }
+
+    .mobile-tabbar {
+      display: flex;
+      flex-shrink: 0;
+      border-top: 1px solid #e5e7eb;
+      background: #fff;
+    }
 
     .mobile-tab {
       display: flex;
+      flex: 1;
       flex-direction: column;
       align-items: center;
-      gap: 3px;
-      padding: .625rem .75rem;
+      justify-content: center;
+      gap: 4px;
+      padding: .625rem .25rem;
       border: none;
       background: none;
       cursor: pointer;
-      font-size: .65rem;
+      font-size: .6rem;
       font-weight: 500;
       color: #9ca3af;
-      white-space: nowrap;
       font-family: inherit;
-      flex-shrink: 0;
       transition: color .15s;
-      border-bottom: 2px solid transparent;
     }
 
     .mobile-tab.active {
       color: #7c3aed;
-      border-bottom-color: #7c3aed;
-    }
-
-    .app-window {
-      flex-direction: column;
-      height: auto;
-    }
-
-    .app-main {
-      height: 420px;
-      overflow-y: auto;
     }
 
     .esbocos-grid {
