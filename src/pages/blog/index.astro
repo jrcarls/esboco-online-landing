@@ -23,8 +23,8 @@ function readTime(body: string) {
 ---
 
 <Layout
-  title="Blog - Esboço Online"
-  description="Reflexões, dicas e recursos para pastores, pregadores e líderes ministeriais."
+  title="Blog para Pastores e Pregadores | Dicas de Sermão e Ministério - Esboço Online"
+  description="Recursos práticos, dicas de pregação e estudo bíblico para pastores e líderes que levam o ministério a sério. Artigos semanais sobre homilética e gestão ministerial."
 >
   <Navbar />
 
@@ -55,7 +55,7 @@ function readTime(body: string) {
                 <span class="blog-dot" aria-hidden="true">·</span>
                 <span class="blog-date">{formatDate(featured.data.pubDate)}</span>
                 <span class="blog-dot" aria-hidden="true">·</span>
-                <span class="blog-read">{readTime(featured.body)} min de leitura</span>
+                <span class="blog-read">{readTime(featured.body ?? '')} min de leitura</span>
               </div>
               <h2 class="blog-featured__title">{featured.data.title}</h2>
               <p class="blog-featured__desc">{featured.data.description}</p>
@@ -74,7 +74,7 @@ function readTime(body: string) {
                   <div class="blog-card__meta">
                     <span class="blog-category">{post.data.category}</span>
                     <span class="blog-dot" aria-hidden="true">·</span>
-                    <span class="blog-read">{readTime(post.body)} min</span>
+                    <span class="blog-read">{readTime(post.body ?? '')} min</span>
                   </div>
                   <h3 class="blog-card__title">{post.data.title}</h3>
                   <p class="blog-card__desc">{post.data.description}</p>

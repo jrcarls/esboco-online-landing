@@ -14,12 +14,28 @@ import { faqs } from '../data/faq';
 <Layout>
   <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify({
     '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Esboço Online',
+    url: 'https://esbocoonline.com.br',
+  })} />
+  <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Esboço Online',
     url: 'https://esbocoonline.com.br',
     logo: 'https://esbocoonline.com.br/favicon.svg',
     description: 'A plataforma completa para pastores e pregadores gerenciarem esboços, estudar a Bíblia e organizar a agenda ministerial.',
     sameAs: ['https://app.esbocoonline.com.br'],
+  })} />
+  <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Esboço Online',
+    operatingSystem: 'Web',
+    applicationCategory: 'ProductivityApplication',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL' },
+    description: 'A plataforma completa para pastores e pregadores gerenciarem esboços, estudar a Bíblia e organizar a agenda ministerial.',
+    url: 'https://app.esbocoonline.com.br',
   })} />
   <script is:inline type="application/ld+json" slot="head" set:html={JSON.stringify({
     '@context': 'https://schema.org',

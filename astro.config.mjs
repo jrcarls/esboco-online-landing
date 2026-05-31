@@ -13,6 +13,16 @@ export default defineConfig({
         !page.includes('/blob/') &&
         !page.includes('/termos-de-uso/') &&
         !page.includes('/privacidade/'),
+      serialize(item) {
+        /** @type {Record<string, string>} */
+        const blogDates = {
+          'https://esbocoonline.com.br/blog/agenda-ministerial-digital/': '2026-05-22',
+          'https://esbocoonline.com.br/blog/como-organizar-seus-sermons/': '2026-05-22',
+          'https://esbocoonline.com.br/blog/habitos-de-estudo-biblico/': '2026-05-22',
+        };
+        const lastmod = blogDates[item.url] ?? new Date().toISOString().split('T')[0];
+        return { ...item, lastmod };
+      },
     }),
   ],
   image: {
