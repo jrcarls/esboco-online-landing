@@ -1,0 +1,1311 @@
+---
+import { Image } from 'astro:assets';
+import logoLight from '../../assets/logo-light.svg';
+import logoIcon from '../../assets/logo-icon.svg';
+---
+
+<section id="preview" class="preview-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explore o app antes de criar sua conta</h2>
+      <p class="section-sub">Navegue pelas funcionalidades como se estivesse logado. Sem precisar se cadastrar.</p>
+    </div>
+
+    <div class="browser-frame" role="presentation" aria-label="Prévia do aplicativo">
+      <!-- Browser chrome -->
+      <div class="browser-topbar">
+        <div class="browser-dots">
+          <span class="dot" style="background:#ff5f57"></span>
+          <span class="dot" style="background:#ffbd2e"></span>
+          <span class="dot" style="background:#28c840"></span>
+        </div>
+        <div class="browser-urlbar">
+          <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          app.esbocoonline.com.br
+        </div>
+        <div style="width:52px"></div>
+      </div>
+
+      <!-- App window -->
+      <div class="app-window">
+
+        <!-- Sidebar desktop -->
+        <aside class="app-sidebar">
+          <div class="sidebar-logo-wrap">
+            <Image src={logoLight} alt="Esboço Online" class="sidebar-logo" />
+          </div>
+
+          <nav class="sidebar-nav">
+            <button class="nav-item" data-tab="inicio">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Início</span>
+            </button>
+            <button class="nav-item active" data-tab="esbocos">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <span>Meus Esboços</span>
+            </button>
+            <button class="nav-item" data-tab="biblia">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span>Bíblia</span>
+            </button>
+            <button class="nav-item" data-tab="agenda">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Agenda</span>
+            </button>
+            <button class="nav-item" data-tab="favoritos">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+              <span>Favoritos</span>
+            </button>
+          </nav>
+
+          <div class="sidebar-bottom">
+            <button class="sidebar-btn">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Feedback</span>
+            </button>
+            <button class="sidebar-btn">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>Ajuda & Suporte</span>
+            </button>
+          </div>
+
+          <div class="sidebar-footer">
+            <div class="user-chip">
+              <div class="user-avatar">P</div>
+              <span class="user-name">Pastor João</span>
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left:auto;color:#9ca3af;flex-shrink:0"><polyline points="18 15 12 9 6 15"/></svg>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Mobile tab bar -->
+        <div class="mobile-tabbar">
+          <button class="mobile-tab" data-tab="inicio">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Início</span>
+          </button>
+          <button class="mobile-tab active" data-tab="esbocos">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Esboços</span>
+          </button>
+          <button class="mobile-tab" data-tab="biblia">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Bíblia</span>
+          </button>
+          <button class="mobile-tab" data-tab="agenda">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Agenda</span>
+          </button>
+          <button class="mobile-tab" data-tab="favoritos">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            <span>Favoritos</span>
+          </button>
+        </div>
+
+        <!-- Main content -->
+        <main class="app-main">
+
+          <!-- ── Panel: Início ── -->
+          <div class="panel" id="tab-inicio">
+            <div class="panel-header">
+              <div>
+                <h1 class="panel-title">Boa tarde, Pastor João!</h1>
+                <p class="panel-sub">sábado, 31 de maio de 2026</p>
+              </div>
+              <button class="btn-primary-sm">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Novo esboço
+              </button>
+            </div>
+
+            <div class="card verse-day-card">
+              <p class="card-label">Versículo do dia</p>
+              <blockquote class="verse-day-text">"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."</blockquote>
+              <p class="verse-day-ref">— João 3:16</p>
+            </div>
+
+            <div class="group-block">
+              <p class="group-label">Próximo evento</p>
+              <div class="card row-card">
+                <div class="event-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="row-info">
+                  <p class="row-title">Culto de Domingo</p>
+                  <p class="row-meta">Dom, 1 jun · 10:00 · Igreja Central</p>
+                </div>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+            </div>
+
+            <div class="group-block">
+              <div class="group-row-header">
+                <p class="group-label" style="margin-bottom:0">Esboços recentes</p>
+                <span class="link-sm">Ver todos</span>
+              </div>
+              <div class="card-stack">
+                <div class="card row-card">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#9ca3af;flex-shrink:0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  <span class="row-title flex-1">A Fé que Move Montanhas</span>
+                  <span class="row-date">2 dias atrás</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="card row-card">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#9ca3af;flex-shrink:0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  <span class="row-title flex-1">O Amor de Deus — João 3:16</span>
+                  <span class="row-date">5 dias atrás</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="card row-card">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#9ca3af;flex-shrink:0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  <span class="row-title flex-1">Crescendo na Graça</span>
+                  <span class="row-date">1 semana atrás</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Panel: Meus Esboços ── -->
+          <div class="panel active" id="tab-esbocos">
+            <div class="panel-header">
+              <div>
+                <h1 class="panel-title">Meus Esboços</h1>
+                <p class="panel-sub">6 esboços <span style="color:#9ca3af">(6/10)</span></p>
+              </div>
+              <button class="btn-primary-sm">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Novo Esboço
+              </button>
+            </div>
+
+            <div class="search-input">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#9ca3af;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span style="color:#9ca3af;font-size:.8125rem">Buscar...</span>
+            </div>
+
+            <div class="esbocos-grid">
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">A Fé que Move Montanhas</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Baseado em Mateus 17:20. Uma pregação sobre a importância da fé genuína e como ela transforma nossa vida.</p>
+                <span class="esboco-data">2 dias atrás</span>
+              </div>
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">O Amor de Deus</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Uma reflexão profunda sobre o amor incondicional de Deus e o sacrifício de Jesus Cristo pela humanidade.</p>
+                <span class="esboco-data">5 dias atrás</span>
+              </div>
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">Crescendo na Graça</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Como crescer espiritualmente por meio da Palavra, oração e comunhão com outros irmãos em Cristo.</p>
+                <span class="esboco-data">1 semana atrás</span>
+              </div>
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">A Oração de Jabez</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Estudo aprofundado sobre 1 Crônicas 4:10 e como essa oração pode ser aplicada em nossas vidas hoje.</p>
+                <span class="esboco-data">2 semanas atrás</span>
+              </div>
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">O Servo Fiel</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Reflexão sobre a parábola dos talentos e o que significa ser um servo fiel no Reino de Deus.</p>
+                <span class="esboco-data">3 semanas atrás</span>
+              </div>
+              <div class="card esboco-card">
+                <div class="esboco-top">
+                  <h3 class="esboco-titulo">Nova Criação em Cristo</h3>
+                  <button class="dots-btn" aria-label="Mais opções">
+                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+                  </button>
+                </div>
+                <p class="esboco-resumo">Com base em 2 Coríntios 5:17, explorando a transformação que acontece quando nos tornamos nova criação.</p>
+                <span class="esboco-data">1 mês atrás</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Panel: Bíblia ── -->
+          <div class="panel" id="tab-biblia">
+            <div class="panel-header">
+              <h1 class="panel-title">Bíblia</h1>
+            </div>
+
+            <div class="search-input" style="margin-bottom:.625rem">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#9ca3af;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span style="color:#9ca3af;font-size:.8125rem">Busque por referência: João 3, Salmos 23...</span>
+            </div>
+
+            <div class="biblia-controls">
+              <div class="fake-select flex-1">
+                <span>João</span>
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="fake-select" style="width:72px">
+                <span>3</span>
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+
+            <div class="biblia-nav">
+              <button class="btn-ghost-xs">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                Anterior
+              </button>
+              <span class="biblia-ref">João 3</span>
+              <button class="btn-ghost-xs">
+                Próximo
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+
+            <div class="card verses-wrap">
+              <div class="verse-row hl-yellow">
+                <sup class="vnum">1</sup>
+                <span>Havia um homem dos fariseus, chamado Nicodemos, um dos principais dos judeus.</span>
+                <button class="bk-btn" aria-label="Salvar versículo">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+              <div class="verse-row">
+                <sup class="vnum">2</sup>
+                <span>Este foi ter com Jesus de noite, e disse-lhe: Rabi, sabemos que és Mestre vindo da parte de Deus; porque ninguém pode fazer estes sinais que tu fazes, se Deus não for com ele.</span>
+                <button class="bk-btn" aria-label="Salvar versículo">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+              <div class="verse-row">
+                <sup class="vnum">3</sup>
+                <span>Jesus respondeu, e disse-lhe: Na verdade, na verdade te digo que aquele que não nascer de novo não pode ver o reino de Deus.</span>
+                <button class="bk-btn bk-saved" aria-label="Salvo nos favoritos">
+                  <svg width="14" height="14" fill="currentColor" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+              <div class="verse-row hl-blue">
+                <sup class="vnum">4</sup>
+                <span>Disse-lhe Nicodemos: Como pode um homem nascer sendo velho? Pode tornar a entrar no ventre de sua mãe e nascer?</span>
+                <button class="bk-btn" aria-label="Salvar versículo">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+              <div class="verse-row">
+                <sup class="vnum">5</sup>
+                <span>Jesus respondeu: Na verdade, na verdade te digo que aquele que não nascer da água e do Espírito não pode entrar no reino de Deus.</span>
+                <button class="bk-btn" aria-label="Salvar versículo">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+              <div class="verse-row hl-yellow">
+                <sup class="vnum">16</sup>
+                <span>Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</span>
+                <button class="bk-btn bk-saved" aria-label="Salvo nos favoritos">
+                  <svg width="14" height="14" fill="currentColor" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Panel: Agenda ── -->
+          <div class="panel" id="tab-agenda">
+            <div class="panel-header">
+              <h1 class="panel-title">Agenda</h1>
+              <button class="btn-primary-sm">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Novo evento
+              </button>
+            </div>
+
+            <div class="card mini-cal">
+              <div class="cal-head">
+                <button class="cal-nav-btn">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span class="cal-month">Junho 2026</span>
+                <button class="cal-nav-btn">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="cal-grid">
+                <span class="wday">D</span><span class="wday">S</span><span class="wday">T</span><span class="wday">Q</span><span class="wday">Q</span><span class="wday">S</span><span class="wday">S</span>
+                <span class="cday empty"></span>
+                <span class="cday ev">1</span>
+                <span class="cday ev">2</span>
+                <span class="cday">3</span>
+                <span class="cday ev">4</span>
+                <span class="cday">5</span>
+                <span class="cday ev">6</span>
+                <span class="cday ev">7</span>
+                <span class="cday">8</span>
+                <span class="cday ev">9</span>
+                <span class="cday">10</span>
+                <span class="cday">11</span>
+                <span class="cday">12</span>
+                <span class="cday">13</span>
+                <span class="cday ev">14</span>
+                <span class="cday">15</span>
+                <span class="cday">16</span>
+                <span class="cday ev">17</span>
+                <span class="cday">18</span>
+                <span class="cday">19</span>
+                <span class="cday ev">20</span>
+                <span class="cday ev">21</span>
+                <span class="cday">22</span>
+                <span class="cday ev">23</span>
+                <span class="cday">24</span>
+                <span class="cday ev">25</span>
+                <span class="cday">26</span>
+                <span class="cday">27</span>
+                <span class="cday ev">28</span>
+                <span class="cday">29</span>
+                <span class="cday ev">30</span>
+              </div>
+            </div>
+
+            <p class="group-label">Próximos eventos</p>
+            <div class="card-stack">
+              <div class="card row-card">
+                <div class="date-badge"><span class="db-day">1</span><span class="db-mon">JUN</span></div>
+                <div class="row-info">
+                  <p class="row-title">Culto de Domingo</p>
+                  <p class="row-meta">10:00 · Igreja Central</p>
+                </div>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+              <div class="card row-card">
+                <div class="date-badge"><span class="db-day">2</span><span class="db-mon">JUN</span></div>
+                <div class="row-info">
+                  <p class="row-title">Reunião de Pastores</p>
+                  <p class="row-meta">19:00 · Escritório</p>
+                </div>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+              <div class="card row-card">
+                <div class="date-badge"><span class="db-day">4</span><span class="db-mon">JUN</span></div>
+                <div class="row-info">
+                  <p class="row-title">Estudo Bíblico</p>
+                  <p class="row-meta">20:00 · Igreja Central</p>
+                </div>
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:#d1d5db;flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Panel: Favoritos ── -->
+          <div class="panel" id="tab-favoritos">
+            <div class="panel-header">
+              <div>
+                <h1 class="panel-title">Favoritos</h1>
+                <p class="panel-sub" style="color:#9ca3af">12/50</p>
+              </div>
+            </div>
+
+            <div class="card-stack">
+              <div class="card fav-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed;flex-shrink:0;margin-top:2px"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <div class="fav-body">
+                  <p class="fav-ref">João 3:16</p>
+                  <p class="fav-text">Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.</p>
+                </div>
+                <button class="trash-btn" aria-label="Remover favorito">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </button>
+              </div>
+              <div class="card fav-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed;flex-shrink:0;margin-top:2px"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <div class="fav-body">
+                  <p class="fav-ref">Filipenses 4:13</p>
+                  <p class="fav-text">Posso todas as coisas naquele que me fortalece.</p>
+                </div>
+                <button class="trash-btn" aria-label="Remover favorito">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </button>
+              </div>
+              <div class="card fav-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed;flex-shrink:0;margin-top:2px"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <div class="fav-body">
+                  <p class="fav-ref">Jeremias 29:11</p>
+                  <p class="fav-text">Porque sou eu que conheço os planos que tenho para vós, diz o Senhor; planos de paz e não de mal, para vos dar um futuro e uma esperança.</p>
+                </div>
+                <button class="trash-btn" aria-label="Remover favorito">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </button>
+              </div>
+              <div class="card fav-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed;flex-shrink:0;margin-top:2px"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <div class="fav-body">
+                  <p class="fav-ref">Romanos 8:28</p>
+                  <p class="fav-text">Sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus.</p>
+                </div>
+                <button class="trash-btn" aria-label="Remover favorito">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </button>
+              </div>
+              <div class="card fav-item">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color:#7c3aed;flex-shrink:0;margin-top:2px"><path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                <div class="fav-body">
+                  <p class="fav-ref">Salmos 23:1</p>
+                  <p class="fav-text">O Senhor é o meu pastor e nada me faltará.</p>
+                </div>
+                <button class="trash-btn" aria-label="Remover favorito">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const allBtns = document.querySelectorAll('[data-tab]');
+
+  allBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = (btn as HTMLElement).dataset.tab;
+      if (!tab) return;
+
+      allBtns.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll(`[data-tab="${tab}"]`).forEach(b => b.classList.add('active'));
+
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(`tab-${tab}`)?.classList.add('active');
+    });
+  });
+</script>
+
+<style>
+  /* ── Section wrapper ── */
+  .preview-section {
+    padding: 6rem 0;
+    background: var(--color-bg-subtle);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -.025em;
+    color: var(--color-text);
+    max-width: 560px;
+  }
+
+  .section-sub {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    max-width: 480px;
+    line-height: 1.65;
+  }
+
+  /* ── Browser frame ── */
+  .browser-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,.08),
+      0 20px 60px -10px rgba(0,0,0,.18),
+      0 8px 20px -4px rgba(0,0,0,.08);
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .browser-topbar {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .625rem 1rem;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .browser-dots {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .browser-urlbar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 6px;
+    padding: .25rem .625rem;
+    font-size: .75rem;
+    color: #666;
+    font-family: inherit;
+    justify-content: center;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* ── App window ── */
+  .app-window {
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  /* ── Sidebar ── */
+  .app-sidebar {
+    width: 210px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e7eb;
+    background: #fff;
+    padding: .75rem .625rem;
+    gap: .25rem;
+  }
+
+  .sidebar-logo-wrap {
+    padding: .25rem .5rem .75rem;
+  }
+
+  .sidebar-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    padding: .5rem .625rem;
+    border-radius: 8px;
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #6b7280;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background .15s, color .15s;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  .nav-item:hover {
+    background: #f3f4f6;
+    color: #111827;
+  }
+
+  .nav-item.active {
+    background: #f5f3ff;
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  .nav-item.active svg {
+    color: #7c3aed;
+  }
+
+  .sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: .25rem;
+  }
+
+  .sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    padding: .4rem .625rem;
+    border-radius: 8px;
+    font-size: .8rem;
+    color: #9ca3af;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+    transition: background .15s, color .15s;
+  }
+
+  .sidebar-btn:hover {
+    background: #f3f4f6;
+    color: #6b7280;
+  }
+
+  .sidebar-footer {
+    border-top: 1px solid #f3f4f6;
+    padding-top: .625rem;
+    margin-top: .25rem;
+  }
+
+  .user-chip {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .15s;
+  }
+
+  .user-chip:hover { background: #f3f4f6; }
+
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .user-name {
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #374151;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ── Mobile tab bar ── */
+  .mobile-tabbar {
+    display: none;
+  }
+
+  /* ── Main content ── */
+  .app-main {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #f9fafb;
+    position: relative;
+  }
+
+  /* ── Panels ── */
+  .panel {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    min-height: 100%;
+  }
+
+  .panel.active {
+    display: flex;
+  }
+
+  /* ── Panel header ── */
+  .panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .panel-title {
+    font-size: 1.1875rem;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: -.015em;
+  }
+
+  .panel-sub {
+    font-size: .8rem;
+    color: #6b7280;
+    margin-top: 2px;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary-sm {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    padding: .4rem .75rem;
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: .8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background .15s;
+  }
+
+  .btn-primary-sm:hover { background: #6d28d9; }
+
+  .btn-ghost-xs {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    padding: .3rem .5rem;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    font-size: .8rem;
+    color: #6b7280;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s;
+  }
+
+  .btn-ghost-xs:hover { background: #f3f4f6; }
+
+  /* ── Cards ── */
+  .card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+  }
+
+  .card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  /* ── Search input ── */
+  .search-input {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: .45rem .75rem;
+  }
+
+  /* ── Esboços grid ── */
+  .esbocos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .625rem;
+  }
+
+  .esboco-card {
+    padding: .875rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    cursor: pointer;
+    transition: box-shadow .15s;
+    position: relative;
+  }
+
+  .esboco-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+
+  .esboco-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: .375rem;
+  }
+
+  .esboco-titulo {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .esboco-resumo {
+    font-size: .775rem;
+    color: #6b7280;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .esboco-data {
+    font-size: .7rem;
+    color: #9ca3af;
+  }
+
+  .dots-btn {
+    padding: .125rem;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 0;
+    transition: background .15s;
+  }
+
+  .dots-btn:hover { background: #f3f4f6; color: #6b7280; }
+
+  /* ── Row cards ── */
+  .row-card {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    transition: background .15s;
+  }
+
+  .row-card:hover { background: #fafafa; }
+
+  .row-title {
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #111827;
+  }
+
+  .row-meta {
+    font-size: .75rem;
+    color: #9ca3af;
+    margin-top: 1px;
+  }
+
+  .row-date {
+    font-size: .75rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .row-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .flex-1 { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* ── Event icon ── */
+  .event-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #f5f3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ── Date badge ── */
+  .date-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 34px;
+    flex-shrink: 0;
+  }
+
+  .db-day {
+    font-size: .9375rem;
+    font-weight: 700;
+    color: #7c3aed;
+    line-height: 1;
+  }
+
+  .db-mon {
+    font-size: .6rem;
+    font-weight: 600;
+    color: #9ca3af;
+    letter-spacing: .04em;
+  }
+
+  /* ── Group labels ── */
+  .group-block {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .group-label {
+    font-size: .7rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: .25rem;
+  }
+
+  .group-row-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .25rem;
+  }
+
+  .link-sm {
+    font-size: .75rem;
+    color: #7c3aed;
+    cursor: pointer;
+  }
+
+  /* ── Versículo do dia ── */
+  .verse-day-card {
+    padding: 1rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+    border-color: rgba(124,58,237,.15);
+  }
+
+  .card-label {
+    font-size: .7rem;
+    font-weight: 600;
+    color: #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+
+  .verse-day-text {
+    font-size: .8375rem;
+    color: #374151;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .verse-day-ref {
+    font-size: .775rem;
+    font-weight: 600;
+    color: #7c3aed;
+  }
+
+  /* ── Bible ── */
+  .biblia-controls {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  .fake-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem .625rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: .8125rem;
+    color: #374151;
+    cursor: pointer;
+    gap: .5rem;
+  }
+
+  .biblia-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .375rem;
+  }
+
+  .biblia-ref {
+    font-size: .8125rem;
+    font-weight: 500;
+    color: #6b7280;
+  }
+
+  .verses-wrap {
+    padding: .625rem .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .verse-row {
+    display: flex;
+    align-items: flex-start;
+    gap: .375rem;
+    padding: .3rem .25rem;
+    border-radius: 6px;
+    font-size: .8125rem;
+    color: #374151;
+    line-height: 1.65;
+    transition: background .15s;
+  }
+
+  .verse-row:hover .bk-btn { opacity: 1; }
+
+  .hl-yellow { background: #fef9c3; }
+  .hl-blue   { background: #dbeafe; }
+
+  .vnum {
+    font-size: .65rem;
+    font-weight: 700;
+    color: #7c3aed;
+    flex-shrink: 0;
+    margin-top: 3px;
+    min-width: 14px;
+  }
+
+  .bk-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #d1d5db;
+    cursor: pointer;
+    padding: 2px;
+    line-height: 0;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .15s, color .15s;
+    margin-top: 2px;
+  }
+
+  .bk-btn.bk-saved {
+    color: #7c3aed;
+    opacity: 1;
+  }
+
+  /* ── Mini calendar ── */
+  .mini-cal {
+    padding: .875rem 1rem;
+    margin-bottom: .25rem;
+  }
+
+  .cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+  }
+
+  .cal-month {
+    font-size: .8125rem;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .cal-nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background .15s;
+    line-height: 0;
+  }
+
+  .cal-nav-btn:hover { background: #f3f4f6; color: #374151; }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+
+  .wday {
+    font-size: .65rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-align: center;
+    padding: 2px 0 4px;
+    text-transform: uppercase;
+  }
+
+  .cday {
+    font-size: .75rem;
+    color: #374151;
+    text-align: center;
+    padding: 4px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .1s;
+    line-height: 1;
+    position: relative;
+  }
+
+  .cday.empty { cursor: default; }
+
+  .cday:not(.empty):hover { background: #f3f4f6; }
+
+  .cday.ev {
+    font-weight: 600;
+    color: #7c3aed;
+  }
+
+  .cday.ev::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #7c3aed;
+    margin: 2px auto 0;
+  }
+
+  /* ── Favorites ── */
+  .fav-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .625rem;
+    padding: .75rem 1rem;
+  }
+
+  .fav-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .fav-ref {
+    font-size: .75rem;
+    font-weight: 700;
+    color: #7c3aed;
+    margin-bottom: .25rem;
+  }
+
+  .fav-text {
+    font-size: .8rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  .trash-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #d1d5db;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 4px;
+    line-height: 0;
+    transition: color .15s;
+    margin-top: 2px;
+  }
+
+  .trash-btn:hover { color: #ef4444; }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .app-sidebar { display: none; }
+
+    .mobile-tabbar {
+      display: flex;
+      overflow-x: auto;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fff;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .mobile-tabbar::-webkit-scrollbar { display: none; }
+
+    .mobile-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: .625rem .75rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: .65rem;
+      font-weight: 500;
+      color: #9ca3af;
+      white-space: nowrap;
+      font-family: inherit;
+      flex-shrink: 0;
+      transition: color .15s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .mobile-tab.active {
+      color: #7c3aed;
+      border-bottom-color: #7c3aed;
+    }
+
+    .app-window {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .app-main {
+      height: 420px;
+      overflow-y: auto;
+    }
+
+    .esbocos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .browser-frame {
+      border-radius: var(--radius-md);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .esbocos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .browser-topbar {
+      padding: .5rem .75rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+    }
+  }
+</style>
