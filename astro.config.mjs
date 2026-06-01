@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://esbocoonline.com.br',
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       filter: (page) =>
